@@ -2,6 +2,7 @@ using clienteAPI.Data;
 using clienteAPI.Models;
 using Microsoft.AspNetCore.Authentication.Negotiate;
 using Microsoft.EntityFrameworkCore;
+using Scalar.AspNetCore;
 
 namespace clienteAPI
 {
@@ -36,6 +37,7 @@ namespace clienteAPI
             if (app.Environment.IsDevelopment())
             {
                 app.MapOpenApi();
+                app.MapScalarApiReference();
             }
 
             app.UseHttpsRedirection();
